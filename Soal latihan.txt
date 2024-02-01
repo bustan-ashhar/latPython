@@ -1,0 +1,3 @@
+- Buat modul Dosen PA yang berisi list Dosen
+- Gunakan modul Dosen PA pada Mahasiswa
+- Buat fungsi Setter Dosen PA untuk Mahasiswa

@@ -8,9 +8,6 @@ class Mahasiswa(Pendaftar, Khs):
     __krs = []
     
 
-    '''def Mahasiswa():
-        print("Data Mahasiswa")'''
-
     def __init__(self, nama, nik, jenis_kelamin, alamat):
         Pendaftar.__init__(self, nama, nik, jenis_kelamin, alamat)
         #super().__init__(nama, nik, jenis_kelamin, alamat)
@@ -24,6 +21,9 @@ class Mahasiswa(Pendaftar, Khs):
     def _setKRS(self, matkul, kelas):
         mk = {'id': matkul, 'kelas':kelas}
         self.__krs.append(mk)
+
+    #Tambahkan fungsi hapus krs
+    
     
     def getKRS(self):
         print('\n')
