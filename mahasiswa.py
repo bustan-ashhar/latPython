@@ -8,8 +8,8 @@ class Mahasiswa(Pendaftar, Khs):
     __krs = []
     
 
-    def Mahasiswa():
-        print("Data Mahasiswa")
+    '''def Mahasiswa():
+        print("Data Mahasiswa")'''
 
     def __init__(self, nama, nik, jenis_kelamin, alamat):
         Pendaftar.__init__(self, nama, nik, jenis_kelamin, alamat)
@@ -48,6 +48,6 @@ class Mahasiswa(Pendaftar, Khs):
                 ketStatus = "Lulus Harus Tes Toefl"
             else:
                 ketStatus = "Status Tidak Diketahui"
-                
+
         print('Status Mahasiswa')
         return f"{self._nama} {self.__nim} {ketStatus}"

@@ -10,7 +10,7 @@ class Khs:
         data = {'id':matkul, 'nilai':nilai}
         self.__list.append(data)
 
-    #@abstractmethod
+    @abstractmethod
     def getKHS(self):
         return self.__list
     
