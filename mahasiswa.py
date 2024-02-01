@@ -21,17 +21,23 @@ class Mahasiswa(Pendaftar, Khs):
     def _setProdi(self, nim):
         self.__nim = nim
     
-    def _setKRS(self, id_matkul, kelas):
-        mk = {'id':id_matkul, 'kelas':kelas}
+    def _setKRS(self, matkul, kelas):
+        mk = {'id': matkul, 'kelas':kelas}
         self.__krs.append(mk)
     
     def getKRS(self):
+        print('\n')
+        print('Kartu Rencana Studi')
         return self.__krs
     
-    def getKHS(self):
+    def _setKHS(self, matkul, nilai):
+        return super()._setKHS(matkul, nilai)
+    
+    def showKHS(self):
+        print('\n')
         print('Kartu Hasil Studi')
-        return super().getKHS()
-
+        return super().showKHS()
+        
     def getDataMahasiswa(self):
         status  = Pendaftar._getStatus(self)
         ketStatus = "Tidak Lulus"
@@ -42,5 +48,6 @@ class Mahasiswa(Pendaftar, Khs):
                 ketStatus = "Lulus Harus Tes Toefl"
             else:
                 ketStatus = "Status Tidak Diketahui"
-
+                
+        print('Status Mahasiswa')
         return f"{self._nama} {self.__nim} {ketStatus}"
